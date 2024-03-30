@@ -1,0 +1,32 @@
+<main>
+  <div class="slideshow-container">
+    <div *ngFor="let row of photoLinks" [ngClass]="{'mySlides-active': slideIndex == row.slideIndex, 'mySlides-unactive': slideIndex != row.slideIndex}" class="fade">
+      <img [src]="row.photoLink">
+      <img class="img-wave" src="../../../../../assets/img/wave.svg">
+      <!-- <p class="title">TO JEST RYBA</p> -->
+    </div>
+
+    <!-- <div [ngClass]="{'mySlides-active': slideIndex == 0, 'mySlides-unactive': slideIndex != 0}" class="fade">
+      <img src="../../../../../assets/img/picture1.jpg">
+      <p class="title">Gospodarstwo rybackie w Gorzakwi</p>
+    </div> -->
+<!-- 
+    <div [ngClass]="{'mySlides-active': slideIndex == 1,'mySlides-unactive': slideIndex != 1 }" class="fade">
+      <img src="../../../../../assets/img/picture2.jpg">
+      <p class="title">A TO DRUGA<BR>BARDZO FAJNA RYBA</p>
+    </div>
+
+    <div [ngClass]="{'mySlides-active': slideIndex == 2,'mySlides-unactive': slideIndex != 2}" class="fade">
+      <img src="../../../../../assets/img/picture3.jpg">
+      <p class="title">A TO JAKAŚ INNA</p>
+    </div> -->
+  
+  </div>
+
+
+  <div style="text-align:center">
+    <span class="dot" [ngClass]="{'dot-active': slideIndex == 0}" (click)="onClickDotSlide(0)"></span>
+    <span class="dot" [ngClass]="{'dot-active': slideIndex == 1}" (click)="onClickDotSlide(1)"></span>
+    <span class="dot" [ngClass]="{'dot-active': slideIndex == 2}" (click)="onClickDotSlide(2)"></span>
+  </div>
+</main>

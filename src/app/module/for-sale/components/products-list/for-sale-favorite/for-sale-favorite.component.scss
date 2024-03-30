@@ -1,0 +1,70 @@
+.header {
+  font-size: 20pt;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.box {
+  margin-bottom: 20px;
+  padding: 0;
+
+  &:hover {
+    background-color: #30303020;
+  }
+  .picture {
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+
+    .square {
+      padding-top: 100%;
+    }
+  }
+
+  .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between  ;
+    padding: 5px 0 5px 10px;
+    width: 95%;
+    height: 10vh;
+    margin-left: 3%;
+    margin-right: 2%;
+
+    .title {
+      color: teal;
+      font-weight: 500;
+      font-size: 20px;
+    }
+
+    .text {
+      color: #303030;
+    }
+
+    .price {
+      font-weight: 500;
+      font-size: 20px;
+    }
+  }
+}
+
+.info
+{
+  margin-top: 12px;
+  
+  text-align: center;
+  font-size: 2rem;
+  &__header{
+    margin-bottom: 10px;
+  }
+  &__contact{
+    color: gray;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 6vh;
+  }
+}

@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="header">Oferta</div>
+
+  <div class="row">
+    <div class="box col-sm-12 col-md-6" *ngFor="let item of fish">
+      <div class="row">
+        <div class="col-3">
+          <div class="picture" [ngStyle]="{ 'background-image': 'url(' + item.image + ')'}">
+            <div class="square"></div>
+          </div>
+        </div>
+        <div class="description">
+          <div class="title">{{ item.name }}</div>
+          <div class="text">{{ item.description }}</div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <p class="title">Dostępne tropikalne ryby!</p>
+
+  <div class="wrapper">
+    <div class="element">
+      <img class="thumbnail" src="https://fishphotosgosrybackie.s3.eu-west-2.amazonaws.com/photos/page1_pic7.jpg" alt=""
+        class="thumbnail">
+      <div class="element-info">
+        <p class="thumbnail-title">Ut varius dolor ante placerat</p>
+        <p class="thumbnail-desc">Sed tempor, turpis non ornare bibendum, nulla quam congue elit, vitae blandit ligula
+          risus quis risus.</p>
+      </div>
+    </div>
+    <div class="element">
+      <img src="https://fishphotosgosrybackie.s3.eu-west-2.amazonaws.com/photos/page1_pic7.jpg" alt=""
+        class="thumbnail">
+      <div class="element-info">
+        <p class="thumbnail-title">Asety kertya asetli nerafae</p>
+        <p class="thumbnail-desc">Sed tempor, turpis non ornare bibendum, nulla quam congue elit, vitae blandit ligula
+          risus quis risus.</p>
+      </div>
+    </div>
+  </div> -->
+  <div class="info">
+    <h1 class="info__header">Zajmujemy się również naturalnym wędzeniem ryb.</h1>
+    <div class="info__contact">
+    <p class="info__address">
+       Gospodarstwo Rybackie Gorzakiew  Gorzakiew 49  28-114 Gnojno Woj. Świętokrzyskie  
+    </p>
+    <p class="info__phone">
+      Tel. 663 901 506, 609 631 239, 41 353 20 56
+   </p>
+    </div>
+  </div>
+</div>

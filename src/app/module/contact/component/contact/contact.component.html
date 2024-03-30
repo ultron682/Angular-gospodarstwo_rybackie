@@ -1,0 +1,68 @@
+<div class="wrapper">
+  <div #mapContainer id="map"></div>
+  <div class="content">
+    <div class="contact">
+      <div class="address">
+        <!-- <span class="blue" style="font-size: xx-large">Skontaktuj się z nami</span> -->
+        <span style="color:rgb(60, 168, 231); font-size: xx-large;">Skontaktuj się z nami</span>
+        <!-- <h2>Skontaktuj się z nami</h2> -->
+        <div class="address-info">
+          <!-- <h3>Adres:</h3> -->
+          <span style="color:rgb(60, 168, 231); font-size: x-large; line-height: 2em;">Adres:</span>
+          <p>
+            Gospodarstwo Rybackie Gorzakiew 
+            <br />
+            Robert i Jadwiga Sołtysiak
+            <br />
+            Gorzakiew 49,
+            <br />
+            28-114 Gnojno powiat buski
+            <br />
+            woj. Świętokrzyskie
+          </p>
+          <p>
+            <span style="color:rgb(60, 168, 231); font-size: x-large; line-height: 2em;">Numer Kontaktowy:</span>
+            <!-- <span class="blue-tel">Numer Kontaktowfaswerwrwey:</span> -->
+            <br />
+            663 901 506
+            <br />
+            609 631 239
+            <br />
+            41 353 20 56
+          </p>
+        </div>
+      </div>
+      <div class="form">
+        <span style="color:rgb(60, 168, 231); font-size: xx-large; line-height: 2em;">Formularz kontaktowy</span>
+        <form [formGroup]="contactForm">
+          <div class="merged">
+            <mat-form-field appearance="outline">
+              <mat-label>Imię</mat-label>
+              <input formControlName="nameAndSurname" matInput placeholder="Imie" required>
+              <mat-error *ngIf="!!contactForm.controls.nameAndSurname?.errors?.required">Imię jest wymagane</mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>Email</mat-label>
+              <input formControlName="contactEmail" matInput placeholder="e-mail" required>
+              <mat-error *ngIf="!!contactForm.controls.contactEmail?.errors?.required">Email jest wymagany</mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>Numer telefonu</mat-label>
+              <input formControlName="phoneNumber" matInput placeholder="Numer telefonu" required>
+              <mat-error *ngIf="!!contactForm.controls.phoneNumber?.errors?.required">Numer telefonu jest wymagany
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <mat-form-field appearance="outline" class="description">
+            <mat-label>Wiadomość</mat-label>
+            <textarea matInput placeholder="Wiadomość" formControlName="message"></textarea>
+          </mat-form-field>
+          <button type="submit" (click)="onSubmit()">Wyślij</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>

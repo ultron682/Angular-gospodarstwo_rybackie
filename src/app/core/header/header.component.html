@@ -1,0 +1,27 @@
+<div class="header">
+  <img src="../../../assets/img/foo_logo.png" alt="Logo firmy">
+  <nav class="header--large">
+    <ul>
+      <li [routerLink]="['']" routerLinkActive="router-link-active">STRONA GŁÓWNA</li>
+      <!-- <li [routerLink]="['/about-us']" routerLinkActive="router-link-active">O NAS</li> -->
+      <li [routerLink]="['/for-sale']" routerLinkActive="router-link-active">OFERTA</li>
+      <li [routerLink]="['/contact']" routerLinkActive="router-link-active">KONTAKT</li>
+    </ul>
+  </nav>
+  <div id="nav-icon3" class="burger header--element header--mobile" (click)="menu()" [ngClass]="clicked ? 'open' : ''">
+    <div class="lines">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</div>
+<div class="mobile-menu" [ngClass]="clicked ? 'open' : ''">
+  <ul>
+    <li [routerLink]="['']" routerLinkActive="active" (click)="closeMenu()">STRONA GŁÓWNA</li>
+    <!-- <li [routerLink]="['/about-us']" routerLinkActive="active" (click)="closeMenu()">O NAS</li> -->
+    <li [routerLink]="['/for-sale']" routerLinkActive="active" (click)="closeMenu()">OFERTA</li>
+    <li [routerLink]="['/contact']" routerLinkActive="active" (click)="closeMenu()">KONTAKT</li>
+  </ul>
+</div>

@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~normalize.css';
+@import 'bootstrap-4-grid/css/grid.min.css';
+@import url("https://fonts.googleapis.com/css?family=Rosario:300,400,500,600,700&display=swap&subset=latin-ext");
+@import "../node_modules/css-reset-and-normalize/scss/reset-and-normalize";
+
+body {
+  font-family: "Rosario", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+app-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
